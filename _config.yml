@@ -1,3 +1,12 @@
 theme: jekyll-theme-cayman
-title: Nadia Shahmehri Consulting
+title: Nadia Shahmehri
 description: Strategic Systems for Nonprofits & Growing Teams
+
+# Custom colors to match your original site
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Override theme colors
+header_page_color: '#6B8CAE'
+header_heading_color: '#ffffff'
