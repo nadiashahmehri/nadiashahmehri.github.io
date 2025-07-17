@@ -11,9 +11,11 @@
     
     <style>
         :root {
-            --primary-blue: #6B8CAE;
-            --dark-blue: #4A6B8A;
-            --light-gray: #F8F9FA;
+            --primary-blue: #3A4F63;
+            --dark-blue: #2C3E50;
+            --light-accent: #7B96B3;
+            --soft-blue: #E8EDF3;
+            --warm-white: #FAFBFC;
             --text-dark: #2C3E50;
             --text-light: #5A6C7D;
         }
@@ -80,7 +82,7 @@
             padding: 2.5rem 2rem;
             text-align: center;
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            border: 1px solid #e9ecef;
+            border: 2px solid var(--light-accent);
             height: 100%;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -88,6 +90,7 @@
         .approach-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border-color: var(--primary-blue);
         }
         
         .approach-card h4 {
@@ -103,12 +106,25 @@
             line-height: 1.6;
         }
         
+        .approach-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light-accent);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+        
         /* Service cards */
         .service-card {
             background: white;
             border-radius: 8px;
             padding: 2.5rem;
-            border-left: 5px solid var(--primary-blue);
+            border-left: 5px solid var(--light-accent);
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             height: 100%;
             transition: box-shadow 0.3s ease;
@@ -139,7 +155,7 @@
         
         .service-card li:before {
             content: "•";
-            color: var(--primary-blue);
+            color: var(--light-accent);
             position: absolute;
             left: 0;
             font-weight: bold;
@@ -175,7 +191,7 @@
         
         /* CTA section */
         .cta-section {
-            background: var(--light-gray);
+            background: var(--soft-blue);
             padding: 4rem 0;
             text-align: center;
         }
@@ -193,7 +209,7 @@
         }
         
         .cta-button {
-            background: var(--primary-blue);
+            background: var(--light-accent);
             color: white;
             padding: 1rem 2.5rem;
             border-radius: 8px;
@@ -202,14 +218,14 @@
             font-size: 1.1rem;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(107, 140, 174, 0.3);
+            box-shadow: 0 4px 15px rgba(123, 150, 179, 0.3);
         }
         
         .cta-button:hover {
-            background: var(--dark-blue);
+            background: var(--primary-blue);
             color: white;
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(107, 140, 174, 0.4);
+            box-shadow: 0 8px 25px rgba(123, 150, 179, 0.4);
             text-decoration: none;
         }
         
@@ -271,8 +287,7 @@
             <h3 class="section-title">Who I Help</h3>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <p class="lead text-center mb-4">I work with small nonprofits and growing mission-driven teams ready to organize their operations. From onboarding and process development to communications and reporting, I help you build systems that support your staff and free up optimal time for what matters most.</p>
-                    <p class="text-center">I focus on three key areas: building solutions for small teams, creating systems that scale, and developing custom-fit tools.</p>
+                    <p class="lead text-center mb-4">I work with small nonprofits and growing mission-driven teams ready to organize their operations. I focus on three key areas: building solutions for small teams, creating systems that scale, and developing custom-fit tools.</p>
                 </div>
             </div>
         </div>
@@ -285,18 +300,21 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="approach-card">
+                        <div class="approach-icon">👥</div>
                         <h4>Built for Small Teams</h4>
                         <p>Practical solutions designed specifically for organizations with limited resources and staff</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="approach-card">
+                        <div class="approach-icon">📈</div>
                         <h4>Systems That Scale</h4>
                         <p>Processes that grow with your organization without becoming overwhelming</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="approach-card">
+                        <div class="approach-icon">🔧</div>
                         <h4>Custom-Fit Tools</h4>
                         <p>Tailored solutions that match your team's unique workflow and culture</p>
                     </div>
