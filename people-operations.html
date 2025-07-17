@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People Operations & Team Systems - Nadia Shahmehri Consulting</title>
+    <meta name="description" content="HR systems, onboarding workflows, and team management solutions for nonprofits and growing organizations.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #3A4F63;
+            --dark-blue: #2C3E50;
+            --light-accent: #7B96B3;
+            --rich-gold: #B8860B;
+            --soft-blue: #E8EDF3;
+            --warm-white: #FAFBFC;
+            --text-dark: #2C3E50;
+            --text-light: #5A6C7D;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        /* Header Navigation */
+        .nav-header {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-brand {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+        
+        .intro-section {
+            background: var(--primary-blue);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .intro-section p {
+            font-size: 1.2rem;
+            margin: 0;
+            opacity: 0.95;
+        }
+        
+        /* Section styling */
+        .section-padding {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            color: var(--text-dark);
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        /* Service area cards */
+        .service-area {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--light-accent);
+        }
+        
+        .service-area h4 {
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-area ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .service-area li {
+            position: relative;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        
+        .service-area li:before {
+            content: "•";
+            color: var(--light-accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Results section */
+        .results-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .results-column h5 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--soft-blue);
+        }
+        
+        .results-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .results-list li {
+            position: relative;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            font-size: 1rem;
+        }
+        
+        .results-list.benefits li:before {
+            content: "✓";
+            color: #2ECC71;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .results-list.problems li:before {
+            content: "✗";
+            color: #E74C3C;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* CTA section */
+        .cta-section {
+            background: var(--soft-blue);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .cta-section h3 {
+            color: var(--primary-blue);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-button {
+            background: #27AE60;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+            border: 2px solid #27AE60;
+        }
+        
+        .cta-button:hover {
+            background: #229954;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.4);
+            text-decoration: none;
+            border-color: #229954;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .footer p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="nav-header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="nav-brand">Nadia Shahmehri Consulting</a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#" style="color: var(--primary-blue);">Services</a></li>
+                        <li><a href="#">Results</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>People Operations & Team Systems</h1>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <p class="text-center">I help you build systems for onboarding, payroll, and internal workflows so you can focus on your team and your mission.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What This Includes -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">What This Includes</h2>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="service-area">
+                        <h4>Payroll Systems</h4>
+                        <ul>
+                            <li>Set up payroll systems & processing workflows</li>
+                            <li>Manage employee time tracking & PTO requests</li>
+                            <li>Handle reimbursements & expense processing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-area">
+                        <h4>HRIS Setup & Administration</h4>
+                        <ul>
+                            <li>HR systems setup (Gusto, ADP, etc.)</li>
+                            <li>Google Workspace admin. & user management</li>
+                            <li>Organize and maintain centralized employee records</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-area">
+                        <h4>Change Management</h4>
+                        <ul>
+                            <li>System transitions & staffing changes</li>
+                            <li>Training and support for new processes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="service-area">
+                        <h4>HR Documentation</h4>
+                        <ul>
+                            <li>Build approval workflows for time-off & expenses</li>
+                            <li>Manage performance review cycles</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-area">
+                        <h4>Onboarding</h4>
+                        <ul>
+                            <li>Onboarding processes with welcome materials</li>
+                            <li>Tech setup guides & role procedures</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="section-title text-white">Ready to Streamline People Operations</h2>
+            
+            <div class="results-grid">
+                <div class="results-column">
+                    <h5>✓ Ideal for organizations that:</h5>
+                    <ul class="results-list benefits">
+                        <li>Reduce HR admin by 40%</li>
+                        <li>Onboard new hires in days, not weeks</li>
+                        <li>Focus on your mission, not paperwork</li>
+                    </ul>
+                </div>
+                
+                <div class="results-column">
+                    <h5>✗ Ideal for organizations that:</h5>
+                    <ul class="results-list problems">
+                        <li>Have inconsistent or chaotic onboarding</li>
+                        <li>Struggle with payroll and record-keeping</li>
+                        <li>Face challenges managing remote teams</li>
+                        <li>Want to professionalize their HR operations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Ready to Streamline Your People Operations?</h3>
+            <p class="mb-4">Let's discuss how to build HR systems that support your team and mission.</p>
+            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ21PHYPMKeaGR3G2JNrUt0BQP0rJ2Y-OKEifvglXTLPZZExg6R90CsYbu9c-gdceT6zx2fH3JQI?gv=true" target="_blank" class="cta-button">
+                Schedule People Ops Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Nadia Shahmehri Consulting. Strategic Systems for Nonprofits & Growing Teams.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
