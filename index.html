@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadia Shahmehri - Strategic Systems for Nonprofits & Growing Teams</title>
+    <meta name="description" content="Strategic systems consulting for nonprofits and growing mission-driven teams. 20+ years experience in operations, process design, and organizational development.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #6B8CAE;
+            --dark-blue: #4A6B8A;
+            --light-gray: #F8F9FA;
+            --text-dark: #2C3E50;
+            --text-light: #5A6C7D;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-section h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info {
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Section styling */
+        .section-padding {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            color: var(--text-dark);
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        /* Approach cards */
+        .approach-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 1px solid #e9ecef;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .approach-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .approach-card h4 {
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .approach-card p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Service cards */
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2.5rem;
+            border-left: 5px solid var(--primary-blue);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            height: 100%;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h4 {
+            color: var(--primary-blue);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-card li {
+            position: relative;
+            padding: 0.4rem 0 0.4rem 1.5rem;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        
+        .service-card li:before {
+            content: "•";
+            color: var(--primary-blue);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Stats section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 300;
+            display: block;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        
+        /* CTA section */
+        .cta-section {
+            background: var(--light-gray);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .cta-section h3 {
+            color: var(--primary-blue);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            background: var(--primary-blue);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(107, 140, 174, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: var(--dark-blue);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(107, 140, 174, 0.4);
+            text-decoration: none;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+        }
+        
+        .footer p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-section h2 {
+                font-size: 1.2rem;
+            }
+            
+            .contact-info a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            .stat-number {
+                font-size: 3rem;
+            }
+            
+            .section-padding {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Nadia Shahmehri</h1>
+            <h2>Strategic Systems for Nonprofits & Growing Teams</h2>
+            <div class="contact-info">
+                <a href="tel:701-346-2342">701-346-2342</a>
+                <span class="d-none d-md-inline">|</span>
+                <a href="mailto:nadia.shahmehri@gmail.com">nadia.shahmehri@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who I Help Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h3 class="section-title">Who I Help</h3>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead text-center mb-4">I work with small nonprofits and growing mission-driven teams ready to organize their operations. From onboarding and process development to communications and reporting, I help you build systems that support your staff and free up optimal time for what matters most.</p>
+                    <p class="text-center">I focus on three key areas: building solutions for small teams, creating systems that scale, and developing custom-fit tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Approach Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h3 class="section-title">My Approach</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="approach-card">
+                        <h4>Built for Small Teams</h4>
+                        <p>Practical solutions designed specifically for organizations with limited resources and staff</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="approach-card">
+                        <h4>Systems That Scale</h4>
+                        <p>Processes that grow with your organization without becoming overwhelming</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="approach-card">
+                        <h4>Custom-Fit Tools</h4>
+                        <p>Tailored solutions that match your team's unique workflow and culture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Service Areas -->
+    <section class="section-padding">
+        <div class="container">
+            <h3 class="section-title">Core Service Areas</h3>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <h4>People Operations & Team Systems</h4>
+                        <ul>
+                            <li>Onboarding workflows and documentation</li>
+                            <li>Team communication structures</li>
+                            <li>Performance review processes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <h4>Process Design & Documentation</h4>
+                        <ul>
+                            <li>SOPs, approval systems, and template libraries</li>
+                            <li>Workflow optimization</li>
+                            <li>Knowledge management systems</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <h4>Database & Data Management</h4>
+                        <ul>
+                            <li>CRM implementation and optimization</li>
+                            <li>Data tracking systems and reporting</li>
+                            <li>Information architecture</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <h4>Communications & Digital Presence</h4>
+                        <ul>
+                            <li>Newsletter and social media workflows</li>
+                            <li>Content management systems</li>
+                            <li>Digital communication strategies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <h3 class="section-title text-white">Why Teams Choose to Work with Me</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <span class="stat-number">20+</span>
+                        <div class="stat-label">Years of Operations<br>Experience</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <span class="stat-number">60%</span>
+                        <div class="stat-label">Average Reduction in<br>Administrative Tasks</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <span class="stat-number">75%</span>
+                        <div class="stat-label">Faster Onboarding</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Ready to Transform Your Operations?</h3>
+            <p>Book a time to walk through your current challenges and explore what's possible with the right systems.</p>
+            <a href="mailto:nadia.shahmehri@gmail.com?subject=Operations%20Consultation" class="cta-button">
+                Schedule Free Operations Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Nadia Shahmehri Consulting. Helping mission-driven organizations build sustainable systems that support their people and amplify their impact.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
