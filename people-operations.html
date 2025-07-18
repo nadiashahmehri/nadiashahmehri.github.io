@@ -105,6 +105,10 @@
             margin-bottom: 2rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             border-left: 4px solid var(--primary-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 200px;
         }
         
         .service-area h4 {
@@ -118,6 +122,7 @@
             list-style: none;
             padding: 0;
             margin: 0;
+            flex-grow: 1;
         }
         
         .service-area li {
@@ -292,7 +297,7 @@
             <h2 class="section-title">What This Includes</h2>
             
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-flex">
                     <div class="service-area">
                         <h4>Payroll Systems</h4>
                         <ul>
@@ -301,7 +306,19 @@
                             <li>Handle reimbursements & expense processing</li>
                         </ul>
                     </div>
-                    
+                </div>
+                
+                <div class="col-lg-6 d-flex">
+                    <div class="service-area">
+                        <h4>HR Documentation</h4>
+                        <ul>
+                            <li>Build approval workflows for time-off & expenses</li>
+                            <li>Manage performance review cycles</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 d-flex">
                     <div class="service-area">
                         <h4>HRIS Setup & Administration</h4>
                         <ul>
@@ -310,30 +327,24 @@
                             <li>Organize and maintain centralized employee records</li>
                         </ul>
                     </div>
-                    
-                    <div class="service-area">
-                        <h4>Change Management</h4>
-                        <ul>
-                            <li>System transitions & staffing changes</li>
-                            <li>Training and support for new processes</li>
-                        </ul>
-                    </div>
                 </div>
                 
-                <div class="col-lg-6">
-                    <div class="service-area">
-                        <h4>HR Documentation</h4>
-                        <ul>
-                            <li>Build approval workflows for time-off & expenses</li>
-                            <li>Manage performance review cycles</li>
-                        </ul>
-                    </div>
-                    
+                <div class="col-lg-6 d-flex">
                     <div class="service-area">
                         <h4>Onboarding</h4>
                         <ul>
                             <li>Onboarding processes with welcome materials</li>
                             <li>Tech setup guides & role procedures</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-12">
+                    <div class="service-area">
+                        <h4>Change Management</h4>
+                        <ul>
+                            <li>System transitions & staffing changes</li>
+                            <li>Training and support for new processes</li>
                         </ul>
                     </div>
                 </div>
