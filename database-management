@@ -105,6 +105,10 @@
             margin-bottom: 2rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             border-left: 4px solid var(--primary-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 200px;
         }
         
         .service-area h4 {
@@ -118,6 +122,7 @@
             list-style: none;
             padding: 0;
             margin: 0;
+            flex-grow: 1;
         }
         
         .service-area li {
@@ -292,42 +297,46 @@
             <h2 class="section-title">What This Includes</h2>
             
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-flex">
                     <div class="service-area">
-                        <h4>Data Cleanup & Compilation</h4>
+                        <h4>Clean, Connected Data</h4>
                         <ul>
-                            <li>Data cleanup & error elimination</li>
-                            <li>Multi-source data integration</li>
-                            <li>Data format & naming standardization</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-area">
-                        <h4>Database Setup & Migration</h4>
-                        <ul>
-                            <li>Set up donor databases and CRM systems</li>
-                            <li>Data migration without loss</li>
-                            <li>Train staff on new database systems</li>
+                            <li>Reliable data you can trust for decisions</li>
+                            <li>Connected systems that work together</li>
+                            <li>Consistent information across your organization</li>
                         </ul>
                     </div>
                 </div>
                 
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-flex">
                     <div class="service-area">
-                        <h4>Dashboards & Visual Reporting</h4>
+                        <h4>Clear Progress Visibility</h4>
                         <ul>
-                            <li>Auto-updating dashboards & key metrics</li>
-                            <li>Charts & visual reporting templates</li>
-                            <li>Program & fundraising tracking systems</li>
+                            <li>Dashboards that show progress at a glance</li>
+                            <li>Visual reports that tell your story</li>
+                            <li>Tracking systems that capture impact</li>
                         </ul>
                     </div>
-                    
+                </div>
+                
+                <div class="col-lg-6 d-flex">
                     <div class="service-area">
-                        <h4>Custom Spreadsheet Systems</h4>
+                        <h4>Donor & CRM Systems</h4>
                         <ul>
-                            <li>Custom tracking tools & systems</li>
-                            <li>Automate calculations, validations, and summaries</li>
-                            <li>User-friendly data entry layouts</li>
+                            <li>Organized donor relationships & history</li>
+                            <li>Seamless data transfer & setup</li>
+                            <li>Team confidence with new systems</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 d-flex">
+                    <div class="service-area">
+                        <h4>Streamlined Data Entry</h4>
+                        <ul>
+                            <li>Simple, intuitive tracking systems</li>
+                            <li>Automated calculations & summaries</li>
+                            <li>Easy data entry that staff actually use</li>
                         </ul>
                     </div>
                 </div>
