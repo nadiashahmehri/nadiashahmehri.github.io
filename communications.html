@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communications & Digital Presence - Nadia Shahmehri Consulting</title>
+    <meta name="description" content="Email marketing, social media workflows, and content coordination systems for nonprofits and growing organizations.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #CD7F32;
+            --dark-color: #B86F28;
+            --light-accent: #E6B85C;
+            --soft-background: #FDF9F3;
+            --warm-white: #FAFBFC;
+            --text-dark: #2C3E50;
+            --text-light: #5A6C7D;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        /* Header Navigation */
+        .nav-header {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-brand {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+        
+        .intro-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .intro-section p {
+            font-size: 1.2rem;
+            margin: 0;
+            opacity: 0.95;
+        }
+        
+        /* Section styling */
+        .section-padding {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            color: var(--text-dark);
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        /* Service area cards */
+        .service-area {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--primary-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 200px;
+        }
+        
+        .service-area h4 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-area ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-grow: 1;
+        }
+        
+        .service-area li {
+            position: relative;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        
+        .service-area li:before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Special highlight box */
+        .highlight-box {
+            border: 2px solid var(--light-accent);
+            background: var(--soft-background);
+        }
+        
+        /* Results section */
+        .results-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .results-column h5 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--light-accent);
+        }
+        
+        .results-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .results-list li {
+            position: relative;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            font-size: 1rem;
+        }
+        
+        .results-list.benefits li:before {
+            content: "✓";
+            color: #2ECC71;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .results-list.problems li:before {
+            content: "✗";
+            color: #E74C3C;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* CTA section */
+        .cta-section {
+            background: var(--soft-background);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .cta-section h3 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-button {
+            background: var(--primary-color);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(205, 127, 50, 0.3);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .cta-button:hover {
+            background: var(--dark-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(205, 127, 50, 0.4);
+            text-decoration: none;
+            border-color: var(--dark-color);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .footer p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="nav-header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="nav-brand">Nadia Shahmehri Consulting</a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#" style="color: var(--primary-color);">Services</a></li>
+                        <li><a href="#">Results</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Communications & Digital Presence</h1>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <p class="text-center">Many small organizations struggle to track whether their communications are working. I help you build simple systems for tracking and coordination so you can manage your messaging without needing a full marketing team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What This Includes -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">What This Includes</h2>
+            
+            <div class="row">
+                <div class="col-lg-6 d-flex">
+                    <div class="service-area">
+                        <h4>Email Marketing Setup</h4>
+                        <ul>
+                            <li>Newsletter platform setup & management</li>
+                            <li>Email metrics training & analysis</li>
+                            <li>Independent reporting templates</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 d-flex">
+                    <div class="service-area highlight-box">
+                        <h4>Social Media Metrics & Tracking</h4>
+                        <ul>
+                            <li>Social platform performance tracking</li>
+                            <li>Key metrics identification & training</li>
+                            <li>Simple performance dashboards</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 d-flex">
+                    <div class="service-area">
+                        <h4>Content Planning Systems</h4>
+                        <ul>
+                            <li>Content calendars & posting workflows</li>
+                            <li>Sustainable content workflows</li>
+                            <li>Consistent messaging templates & systems</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 d-flex">
+                    <div class="service-area">
+                        <h4>Coordinated Communications</h4>
+                        <ul>
+                            <li>Newsletter & social media coordination</li>
+                            <li>Shared calendars & asset libraries</li>
+                            <li>Cross-platform engagement tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="service-area">
+                        <h4>Branding & Internal Systems</h4>
+                        <ul>
+                            <li>Brand guidelines & template libraries</li>
+                            <li>Internal communications systems</li>
+                            <li>Consistent internal & external messaging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="section-title text-white">Ready to Organize Your Communications?</h2>
+            
+            <div class="results-grid">
+                <div class="results-column">
+                    <h5>✓ Perfect for organizations that want:</h5>
+                    <ul class="results-list benefits">
+                        <li>Reduce communication prep time</li>
+                        <li>Post consistently across all platforms</li>
+                        <li>Track what messaging actually works</li>
+                    </ul>
+                </div>
+                
+                <div class="results-column">
+                    <h5>✗ Ideal for organizations that:</h5>
+                    <ul class="results-list problems">
+                        <li>Want to track results but don't know where to start</li>
+                        <li>Send newsletters but can't tell what people actually read</li>
+                        <li>Post on social media but don't know if it's working</li>
+                        <li>Have inconsistent messaging across different platforms</li>
+                        <li>Need help organizing communications workflow</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Ready to Streamline Your Communications?</h3>
+            <p class="mb-4">Let's discuss how to create coordinated messaging systems that help you track what's working and reach your audience more effectively.</p>
+            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ21PHYPMKeaGR3G2JNrUt0BQP0rJ2Y-OKEifvglXTLPZZExg6R90CsYbu9c-gdceT6zx2fH3JQI?gv=true" target="_blank" class="cta-button">
+                Schedule Communications Review
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Nadia Shahmehri Consulting. Strategic Systems for Nonprofits & Growing Teams.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
