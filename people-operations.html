@@ -11,11 +11,10 @@
     
     <style>
         :root {
-            --primary-blue: #3A4F63;
-            --dark-blue: #2C3E50;
-            --light-accent: #7B96B3;
-            --rich-gold: #B8860B;
-            --soft-blue: #E8EDF3;
+            --primary-color: #2E8B57;
+            --dark-color: #256B42;
+            --light-accent: #90EE90;
+            --soft-background: #F0FFF0;
             --warm-white: #FAFBFC;
             --text-dark: #2C3E50;
             --text-light: #5A6C7D;
@@ -37,7 +36,7 @@
         .nav-brand {
             font-size: 1.2rem;
             font-weight: 600;
-            color: var(--primary-blue);
+            color: var(--primary-color);
             text-decoration: none;
         }
         
@@ -56,12 +55,12 @@
         }
         
         .nav-links a:hover {
-            color: var(--primary-blue);
+            color: var(--primary-color);
         }
         
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
             color: white;
             padding: 4rem 0;
             text-align: center;
@@ -74,7 +73,7 @@
         }
         
         .intro-section {
-            background: var(--primary-blue);
+            background: var(--primary-color);
             color: white;
             padding: 3rem 0;
         }
@@ -105,11 +104,11 @@
             padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border-left: 4px solid var(--light-accent);
+            border-left: 4px solid var(--primary-color);
         }
         
         .service-area h4 {
-            color: var(--primary-blue);
+            color: var(--primary-color);
             font-size: 1.4rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
@@ -130,7 +129,7 @@
         
         .service-area li:before {
             content: "•";
-            color: var(--light-accent);
+            color: var(--primary-color);
             position: absolute;
             left: 0;
             font-weight: bold;
@@ -139,7 +138,7 @@
         
         /* Results section */
         .results-section {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
             color: white;
             padding: 4rem 0;
         }
@@ -154,7 +153,7 @@
         .results-column h5 {
             font-size: 1.3rem;
             margin-bottom: 1.5rem;
-            color: var(--soft-blue);
+            color: var(--light-accent);
         }
         
         .results-list {
@@ -186,19 +185,19 @@
         
         /* CTA section */
         .cta-section {
-            background: var(--soft-blue);
+            background: var(--soft-background);
             padding: 4rem 0;
             text-align: center;
         }
         
         .cta-section h3 {
-            color: var(--primary-blue);
+            color: var(--primary-color);
             font-size: 2rem;
             margin-bottom: 1.5rem;
         }
         
         .cta-button {
-            background: #27AE60;
+            background: var(--primary-color);
             color: white;
             padding: 1.2rem 2.5rem;
             border-radius: 8px;
@@ -207,22 +206,22 @@
             font-size: 1.1rem;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
-            border: 2px solid #27AE60;
+            box-shadow: 0 6px 20px rgba(46, 139, 87, 0.3);
+            border: 2px solid var(--primary-color);
         }
         
         .cta-button:hover {
-            background: #229954;
+            background: var(--dark-color);
             color: white;
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.4);
+            box-shadow: 0 10px 30px rgba(46, 139, 87, 0.4);
             text-decoration: none;
-            border-color: #229954;
+            border-color: var(--dark-color);
         }
         
         /* Footer */
         .footer {
-            background: var(--primary-blue);
+            background: var(--primary-color);
             color: white;
             text-align: center;
             padding: 2rem 0;
@@ -260,7 +259,7 @@
                 <nav>
                     <ul class="nav-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#" style="color: var(--primary-blue);">Services</a></li>
+                        <li><a href="#" style="color: var(--primary-color);">Services</a></li>
                         <li><a href="#">Results</a></li>
                         <li><a href="#">About</a></li>
                     </ul>
