@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database & Data Management - Nadia Shahmehri Consulting</title>
+    <meta name="description" content="CRM setup, donor database management, and automated reporting solutions for nonprofits and growing organizations.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1E3A5F;
+            --dark-color: #162E47;
+            --light-accent: #7FB3D3;
+            --soft-background: #F0F4F8;
+            --warm-white: #FAFBFC;
+            --text-dark: #2C3E50;
+            --text-light: #5A6C7D;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        /* Header Navigation */
+        .nav-header {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-brand {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+        
+        .intro-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .intro-section p {
+            font-size: 1.2rem;
+            margin: 0;
+            opacity: 0.95;
+        }
+        
+        /* Section styling */
+        .section-padding {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            color: var(--text-dark);
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        /* Service area cards */
+        .service-area {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .service-area h4 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-area ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .service-area li {
+            position: relative;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        
+        .service-area li:before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Results section */
+        .results-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .results-column h5 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--light-accent);
+        }
+        
+        .results-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .results-list li {
+            position: relative;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            font-size: 1rem;
+        }
+        
+        .results-list.benefits li:before {
+            content: "✓";
+            color: #2ECC71;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .results-list.problems li:before {
+            content: "✗";
+            color: #E74C3C;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* CTA section */
+        .cta-section {
+            background: var(--soft-background);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .cta-section h3 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-button {
+            background: var(--primary-color);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(30, 58, 95, 0.3);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .cta-button:hover {
+            background: var(--dark-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(30, 58, 95, 0.4);
+            text-decoration: none;
+            border-color: var(--dark-color);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .footer p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="nav-header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="nav-brand">Nadia Shahmehri Consulting</a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#" style="color: var(--primary-color);">Services</a></li>
+                        <li><a href="#">Results</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Database & Data Management</h1>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <p class="text-center">Scattered data across multiple systems makes it impossible to see your organization's full picture. I help you clean, connect, and organize your data for better decision-making.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What This Includes -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">What This Includes</h2>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="service-area">
+                        <h4>Data Cleanup & Compilation</h4>
+                        <ul>
+                            <li>Data cleanup & error elimination</li>
+                            <li>Multi-source data integration</li>
+                            <li>Data format & naming standardization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-area">
+                        <h4>Database Setup & Migration</h4>
+                        <ul>
+                            <li>Set up donor databases and CRM systems</li>
+                            <li>Data migration without loss</li>
+                            <li>Train staff on new database systems</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="service-area">
+                        <h4>Dashboards & Visual Reporting</h4>
+                        <ul>
+                            <li>Auto-updating dashboards & key metrics</li>
+                            <li>Charts & visual reporting templates</li>
+                            <li>Program & fundraising tracking systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-area">
+                        <h4>Custom Spreadsheet Systems</h4>
+                        <ul>
+                            <li>Custom tracking tools & systems</li>
+                            <li>Automate calculations, validations, and summaries</li>
+                            <li>User-friendly data entry layouts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="section-title text-white">Ready to Get Your Data Organized?</h2>
+            
+            <div class="results-grid">
+                <div class="results-column">
+                    <h5>✓ Ideal for organizations that:</h5>
+                    <ul class="results-list benefits">
+                        <li>Reduce data entry time by 40%</li>
+                        <li>Eliminate duplicate data entry</li>
+                        <li>Focus on analysis, not data hunting</li>
+                    </ul>
+                </div>
+                
+                <div class="results-column">
+                    <h5>✗ Ideal for organizations that:</h5>
+                    <ul class="results-list problems">
+                        <li>Have manual data entry across systems</li>
+                        <li>Have data scattered across multiple spreadsheets</li>
+                        <li>Struggle with reporting & progress tracking</li>
+                        <li>Lack visibility into donor & program data</li>
+                        <li>Want their existing tools to work together seamlessly</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Ready to Transform Your Data Systems?</h3>
+            <p class="mb-4">Let's discuss how to organize your data for clearer insights and better decision-making.</p>
+            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ21PHYPMKeaGR3G2JNrUt0BQP0rJ2Y-OKEifvglXTLPZZExg6R90CsYbu9c-gdceT6zx2fH3JQI?gv=true" target="_blank" class="cta-button">
+                Schedule Data Review
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Nadia Shahmehri Consulting. Strategic Systems for Nonprofits & Growing Teams.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
