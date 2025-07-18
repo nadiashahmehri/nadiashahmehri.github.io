@@ -140,6 +140,22 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
         
+        .service-card.people-card {
+            border-left-color: #2E8B57;
+        }
+        
+        .service-card.process-card {
+            border-left-color: #8B2635;
+        }
+        
+        .service-card.database-card {
+            border-left-color: #1E3A5F;
+        }
+        
+        .service-card.communications-card {
+            border-left-color: #CD7F32;
+        }
+        
         .service-card h4 {
             color: var(--primary-blue);
             font-size: 1.3rem;
@@ -171,24 +187,25 @@
         
         /* Learn More buttons for service cards */
         .learn-more-btn {
-            padding: 0.6rem 1.5rem;
-            border-radius: 6px;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 1rem;
             display: inline-block;
             transition: all 0.3s ease;
             margin-top: 1.5rem;
             color: white;
             border: none;
             align-self: flex-start;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         
         .learn-more-btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             color: white;
             text-decoration: none;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
         }
         
         .btn-people { background: #2E8B57; }
@@ -330,7 +347,8 @@
             <h3 class="section-title">Who I Help</h3>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <p class="lead text-center mb-4">Helping nonprofits and growing teams organize their operations with practical, scalable systems.</p>
+                    <p class="lead text-center mb-4">I help small nonprofits and growing teams bring order to their operations with practical systems that actually fit how they work.</p>
+                    <p class="text-center">These core service areas are where I put that approach into action:</p>
                 </div>
             </div>
         </div>
@@ -372,7 +390,7 @@
             <h3 class="section-title">Core Service Areas</h3>
             <div class="row g-4">
                 <div class="col-lg-6">
-                    <div class="service-card">
+                    <div class="service-card people-card">
                         <h4>People Operations & Team Systems</h4>
                         <ul>
                             <li>Onboarding workflows & documentation</li>
@@ -383,7 +401,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="service-card">
+                    <div class="service-card process-card">
                         <h4>Process Design & Documentation</h4>
                         <ul>
                             <li>SOPs & template libraries</li>
@@ -394,7 +412,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="service-card">
+                    <div class="service-card database-card">
                         <h4>Database & Data Management</h4>
                         <ul>
                             <li>CRM & donor database setup</li>
@@ -405,7 +423,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="service-card">
+                    <div class="service-card communications-card">
                         <h4>Communications & Digital Presence</h4>
                         <ul>
                             <li>Newsletter and social media workflows</li>
