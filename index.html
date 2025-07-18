@@ -131,6 +131,9 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             height: 100%;
             transition: box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 250px;
         }
         
         .service-card:hover {
@@ -147,6 +150,7 @@
         .service-card ul {
             list-style: none;
             padding: 0;
+            flex-grow: 1;
         }
         
         .service-card li {
@@ -177,6 +181,7 @@
             margin-top: 1.5rem;
             color: white;
             border: none;
+            align-self: flex-start;
         }
         
         .learn-more-btn:hover {
