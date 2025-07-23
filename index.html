@@ -185,7 +185,7 @@
             font-size: 1.2rem;
         }
         
-        /* Learn More buttons for service cards */
+        /* Learn More buttons for service cards - now non-functional */
         .learn-more-btn {
             padding: 0.8rem 2rem;
             border-radius: 8px;
@@ -199,26 +199,27 @@
             border: none;
             align-self: flex-start;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            cursor: default;
         }
         
         .learn-more-btn:hover {
-            transform: translateY(-3px);
+            transform: translateY(-1px);
             color: white;
             text-decoration: none;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
         }
         
         .btn-people { background: #2E8B57; }
-        .btn-people:hover { background: #256B42; }
+        .btn-people:hover { background: #2E8B57; }
         
         .btn-process { background: #8B2635; }
-        .btn-process:hover { background: #6B1D29; }
+        .btn-process:hover { background: #8B2635; }
         
         .btn-database { background: #1E3A5F; }
-        .btn-database:hover { background: #162E47; }
+        .btn-database:hover { background: #1E3A5F; }
         
         .btn-communications { background: #CD7F32; }
-        .btn-communications:hover { background: #B86F28; }
+        .btn-communications:hover { background: #CD7F32; }
         
         /* Stats section */
         .stats-section {
@@ -347,8 +348,7 @@
             <h3 class="section-title">Who I Help</h3>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <p class="lead text-center mb-4">I help small nonprofits and growing teams bring order to their operations with practical systems that actually fit how they work.</p>
-                    <p class="text-center">These core service areas are where I put that approach into action:</p>
+                    <p class="lead text-center mb-4">I work with small nonprofits and growing mission-driven teams to transform chaotic operations into streamlined systems that actually work for real people doing important work.</p>
                 </div>
             </div>
         </div>
@@ -397,7 +397,7 @@
                             <li>HRIS systems setup</li>
                             <li>Change management</li>
                         </ul>
-                        <a href="people-operations.html" class="learn-more-btn btn-people">Learn More</a>
+                        <span class="learn-more-btn btn-people">Learn More</span>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -408,7 +408,7 @@
                             <li>Approval workflows</li>
                             <li>Knowledge management systems</li>
                         </ul>
-                        <a href="process-design.html" class="learn-more-btn btn-process">Learn More</a>
+                        <span class="learn-more-btn btn-process">Learn More</span>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -419,18 +419,18 @@
                             <li>Data cleanup & integration</li>
                             <li>Automated dashboards & reporting</li>
                         </ul>
-                        <a href="database-management.html" class="learn-more-btn btn-database">Learn More</a>
+                        <span class="learn-more-btn btn-database">Learn More</span>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="service-card communications-card">
                         <h4>Communications & Digital Presence</h4>
                         <ul>
-                            <li>Newsletter and social media workflows</li>
+                            <li>Newsletter & social media workflows</li>
                             <li>Content management systems</li>
                             <li>Digital communication strategies</li>
                         </ul>
-                        <a href="communications.html" class="learn-more-btn btn-communications">Learn More</a>
+                        <span class="learn-more-btn btn-communications">Learn More</span>
                     </div>
                 </div>
             </div>
