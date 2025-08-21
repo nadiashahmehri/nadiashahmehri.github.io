@@ -158,7 +158,7 @@
             transition: box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
-            min-height: 250px;
+            min-height: 320px;
         }
         
         .service-card:hover {
@@ -196,18 +196,19 @@
         
         .service-card li {
             position: relative;
-            padding: 0.4rem 0 0.4rem 1.5rem;
+            padding: 0.3rem 0 0.3rem 1.5rem;
             color: var(--text-light);
-            font-size: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
         }
         
         .service-card li:before {
-            content: "•";
+            content: "→";
             color: var(--light-accent);
             position: absolute;
             left: 0;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
         
         /* Learn More buttons for service cards - now non-functional */
@@ -245,6 +246,45 @@
         
         .btn-communications { background: #CD7F32; }
         .btn-communications:hover { background: #CD7F32; }
+        
+        /* Ideal for section */
+        .ideal-for-section {
+            background: var(--soft-blue);
+            padding: 4rem 0;
+        }
+        
+        .ideal-for-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .ideal-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .ideal-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .ideal-card h5 {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .ideal-card p {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin: 0;
+        }
         
         /* Stats section */
         .stats-section {
@@ -350,6 +390,10 @@
             .section-padding {
                 padding: 3rem 0;
             }
+            
+            .service-card {
+                min-height: auto;
+            }
         }
     </style>
 </head>
@@ -404,6 +448,31 @@ Operations consultant helping nonprofits, startups, and growing teams turn uncle
         </div>
     </section>
 
+    <!-- Ideal for Organizations Section -->
+    <section class="ideal-for-section">
+        <div class="container">
+            <h3 class="section-title">Ideal for Organizations With</h3>
+            <div class="ideal-for-grid">
+                <div class="ideal-card">
+                    <h5>Fewer than 25 employees</h5>
+                    <p>Right-sized solutions that don't overcomplicate your operations</p>
+                </div>
+                <div class="ideal-card">
+                    <h5>Growing teams & processes</h5>
+                    <p>Systems that scale with your expanding mission and impact</p>
+                </div>
+                <div class="ideal-card">
+                    <h5>Limited administrative capacity</h5>
+                    <p>Streamlined workflows that reduce time spent on routine tasks</p>
+                </div>
+                <div class="ideal-card">
+                    <h5>Need for operational consistency</h5>
+                    <p>Clear, documented processes everyone can follow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Core Service Areas -->
     <section class="section-padding">
         <div class="container">
@@ -413,10 +482,12 @@ Operations consultant helping nonprofits, startups, and growing teams turn uncle
                     <div class="service-card people-card">
                         <h4>People Operations & Team Systems</h4>
                         <ul>
-                            <li>Onboarding & offboarding workflows</li>
-                            <li>HRIS setup and administration</li>
-                            <li>Payroll & expense processing</li>
-                            <li>Remote team coordination</li>
+                            <li>Onboarding processes & welcome materials</li>
+                            <li>Payroll systems (Gusto, ADP, Paychex, etc.)</li>
+                            <li>HRIS setup & administration</li>
+                            <li>Performance review frameworks</li>
+                            <li>Change management & training</li>
+                            <li>HR documentation & I-9 compliance</li>
                         </ul>
                         <span class="learn-more-btn btn-people">Learn More</span>
                     </div>
@@ -425,10 +496,12 @@ Operations consultant helping nonprofits, startups, and growing teams turn uncle
                     <div class="service-card process-card">
                         <h4>Process Design & Documentation</h4>
                         <ul>
-                            <li>SOPs & documentation</li>
-                            <li>Expense, leave, and purchase request workflows</li>
-                            <li>Centralized resource hubs</li>
-                            <li>Template & communication libraries</li>
+                            <li>Step-by-step workflow guides</li>
+                            <li>Approval workflow systems</li>
+                            <li>Training materials & templates</li>
+                            <li>Process improvement analysis</li>
+                            <li>Reference tools & resources</li>
+                            <li>Workflow mapping & optimization</li>
                         </ul>
                         <span class="learn-more-btn btn-process">Learn More</span>
                     </div>
@@ -437,22 +510,26 @@ Operations consultant helping nonprofits, startups, and growing teams turn uncle
                     <div class="service-card database-card">
                         <h4>Database & Data Management</h4>
                         <ul>
-                            <li>CRM & donor database setup</li>
-                            <li>Data cleanup & integration</li>
-                            <li>Automated dashboards & reporting</li>
-                            <li>Systems training & platform support</li>
+                            <li>Clean, connected data systems</li>
+                            <li>CRM setup & optimization</li>
+                            <li>Progress tracking dashboards</li>
+                            <li>Data integration between platforms</li>
+                            <li>Reporting & analytics setup</li>
+                            <li>Streamlined data entry workflows</li>
                         </ul>
                         <span class="learn-more-btn btn-database">Learn More</span>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="service-card communications-card">
-                        <h4>Communications & Brand Systems</h4>
+                        <h4>Communications & Digital Systems</h4>
                         <ul>
-                            <li>Newsletters & external communications</li>
-                            <li>Clear processes for audience messaging</li>
-                            <li>Brand consistency across platforms</li>
-                            <li>Training for communication tools</li>
+                            <li>Email marketing setup & automation</li>
+                            <li>Content planning & scheduling</li>
+                            <li>Social media coordination</li>
+                            <li>Brand guidelines & templates</li>
+                            <li>Communication workflows</li>
+                            <li>Digital system coordination</li>
                         </ul>
                         <span class="learn-more-btn btn-communications">Learn More</span>
                     </div>
@@ -515,4 +592,3 @@ Operations consultant helping nonprofits, startups, and growing teams turn uncle
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
