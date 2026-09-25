@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nadia Shahmehri | Operations and Systems Consultant</title>
+  <meta name="description" content="Operations consultant for nonprofits and growing teams. I build and implement people, finance, data, and workflow systems that reduce manual work and keep teams aligned." />
+  <link rel="canonical" href="https://nadiashahmehri.github.io/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>NS</text></svg>">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nadia Shahmehri | Operations and Systems Consultant" />
+  <meta property="og:description" content="Operations consultant for nonprofits and growing teams. I build and implement clear internal systems that reduce manual work, support growth, and keep teams aligned." />
+  <meta property="og:url" content="https://nadiashahmehri.github.io/" />
+  <meta name="twitter:card" content="summary" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary-blue: #3A4F63;
+      --dark-blue: #2C3E50;
+      --light-accent: #7B96B3;
+      --people-green: #587568;
+      --database-blue: #64798B;
+      --process-burgundy: #7A4650;
+      --finance-ochre: #887153;
+      --soft-blue: #E8EDF3;
+      --warm-white: #FAFBFC;
+      --text-dark: #2C3E50;
+      --text-light: #5A6C7D;
+      --focus: #27AE60;
+      --nav-height: 64px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--text-dark);
+      background: var(--warm-white);
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+      width: auto;
+      height: auto;
+      padding: .5rem .75rem;
+      background: #fff;
+      border: 2px solid var(--focus);
+      border-radius: .35rem;
+      z-index: 2000;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    .navbar {
+      background: rgba(58, 79, 99, 0.97);
+      backdrop-filter: blur(10px);
+      padding: .75rem 0;
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 1000;
+    }
+    .navbar-brand,
+    .navbar-nav .nav-link { color: #fff !important; }
+    .navbar-brand { font-weight: 650; }
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      padding: .5rem .9rem !important;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link[aria-current="page"] {
+      text-decoration: underline;
+      text-underline-offset: .25rem;
+    }
+
+    section { scroll-margin-top: calc(var(--nav-height) + 16px); }
+
+    .hero-section {
+      background: var(--dark-blue);
+      color: #fff;
+      padding: 7rem 0 5rem;
+    }
+    .hero-inner { max-width: 900px; }
+    .hero-kicker {
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-weight: 700;
+      color: #D9E2EA;
+      margin-bottom: 1rem;
+    }
+    .hero-section h1 {
+      font-size: clamp(2.5rem, 6vw, 4.4rem);
+      line-height: 1;
+      font-weight: 650;
+      margin-bottom: 1.25rem;
+    }
+    .hero-section h2 {
+      max-width: 820px;
+      font-size: clamp(1.15rem, 2.3vw, 1.55rem);
+      line-height: 1.55;
+      font-weight: 400;
+      margin-bottom: 1.75rem;
+    }
+    .contact-info {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-info a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 1rem;
+    }
+    .contact-info a:hover { text-decoration: underline; }
+
+    .btn-primary-cta,
+    .cta-button {
+      background: var(--people-green);
+      color: #fff;
+      border: 2px solid var(--people-green);
+      border-radius: .35rem;
+      font-weight: 650;
+      font-size: 1rem;
+      padding: .85rem 1.35rem;
+      display: inline-block;
+      text-decoration: none;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .btn-primary-cta:hover,
+    .cta-button:hover {
+      background: #267849;
+      border-color: #267849;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .section-padding { padding: 5rem 0; }
+    .section-title {
+      color: var(--text-dark);
+      font-size: clamp(1.65rem, 3vw, 2.35rem);
+      font-weight: 650;
+      margin-bottom: 1rem;
+    }
+    .section-intro {
+      max-width: 760px;
+      color: var(--text-light);
+      font-size: 1.12rem;
+      margin-bottom: 2.75rem;
+    }
+    .section-rule {
+      width: 72px;
+      height: 4px;
+      border: 0;
+      opacity: 1;
+      margin: 0 0 1.5rem;
+      background: var(--primary-blue);
+    }
+
+    /* Approach: intentionally not cards */
+    .approach-section { background: #fff; }
+    .approach-item {
+      padding: 1.5rem 1.75rem 1.5rem 0;
+      height: 100%;
+    }
+    .approach-item + .approach-item { border-left: 1px solid #D8DEE4; padding-left: 2rem; }
+    .approach-mark {
+      display: block;
+      width: 36px;
+      height: 5px;
+      margin-bottom: 1.25rem;
+    }
+    .approach-item:nth-child(1) .approach-mark { background: var(--people-green); }
+    .approach-item:nth-child(2) .approach-mark { background: var(--database-blue); }
+    .approach-item:nth-child(3) .approach-mark { background: var(--process-burgundy); }
+    .approach-item h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: .65rem;
+    }
+    .approach-item p { color: var(--text-light); margin: 0; }
+
+    /* Services */
+    .services-section { background: var(--soft-blue); }
+    .service-card {
+      background: #fff;
+      padding: 2rem;
+      border-top: 5px solid;
+      height: 100%;
+    }
+    .service-card.people { border-top-color: var(--people-green); }
+
+    .service-card.finance {
+      border-top-color: var(--finance-ochre);
+    }
+
+    .service-card.database { border-top-color: var(--database-blue); }
+    .service-card.process { border-top-color: var(--process-burgundy); }
+    .service-card h4 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: .7rem;
+    }
+    .service-summary {
+      color: var(--text-light);
+      margin-bottom: 1.25rem;
+    }
+    .service-list {
+      padding-left: 1.15rem;
+      margin-bottom: 1.5rem;
+    }
+    .service-list li { margin-bottom: .55rem; }
+    .platforms {
+      border-top: 1px solid #DDE2E6;
+      padding-top: 1rem;
+      margin-top: auto;
+      font-size: .9rem;
+      color: var(--text-light);
+    }
+    .platforms strong {
+      display: block;
+      color: var(--text-dark);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .75rem;
+      margin-bottom: .35rem;
+    }
+
+    /* Who I Help */
+    .ideal-for-section {
+      background: #fff;
+      padding: 5rem 0;
+    }
+    .ideal-row {
+      border-top: 1px solid #CCD4DB;
+      padding: 1.35rem 0;
+    }
+    .ideal-row:last-child { border-bottom: 1px solid #CCD4DB; }
+    .ideal-row h5 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      margin: 0 0 .3rem;
+    }
+    .ideal-row p {
+      color: var(--text-light);
+      margin: 0;
+    }
+
+    /* Work examples: editorial rather than another card grid */
+    .work-section {
+      background: #F3F0EC;
+      padding: 5rem 0;
+    }
+    .work-item {
+      padding: 2rem 0;
+      border-top: 1px solid #CFC8C0;
+    }
+    .work-item:last-child { border-bottom: 1px solid #CFC8C0; }
+    .work-item h4 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: .65rem;
+    }
+    .work-item p {
+      color: #4D5964;
+      max-width: 720px;
+      margin-bottom: .8rem;
+    }
+    .work-tags {
+      font-size: .76rem;
+      font-weight: 750;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .work-item.people .work-tags { color: var(--people-green); }
+    .work-item.data .work-tags { color: var(--database-blue); }
+    .work-item.process .work-tags { color: var(--process-burgundy); }
+
+    /* Results */
+    .stats-section {
+      background: var(--dark-blue);
+      color: #fff;
+      padding: 4.5rem 0;
+    }
+    .stats-section .section-title { color: #fff; }
+    .stat {
+      padding: 1rem 1.5rem 1rem 0;
+    }
+    .stat-number {
+      font-size: clamp(2.6rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1;
+      display: block;
+      margin-bottom: .65rem;
+    }
+    .stat-label {
+      max-width: 250px;
+      color: #E5EBF0;
+      font-size: 1rem;
+    }
+
+    .cta-section {
+      background: var(--warm-white);
+      padding: 5rem 0;
+    }
+    .cta-inner {
+      max-width: 800px;
+      border-left: 5px solid var(--process-burgundy);
+      padding-left: 2rem;
+    }
+    .cta-section h3 {
+      color: var(--text-dark);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      margin-bottom: .75rem;
+      font-weight: 650;
+    }
+    .cta-section p {
+      font-size: 1.08rem;
+      color: var(--text-light);
+      margin-bottom: 1.35rem;
+    }
+
+    .footer {
+      background: var(--primary-blue);
+      color: #fff;
+      padding: 2rem 0;
+    }
+    .footer p { margin: .15rem 0; opacity: .95; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; }
+      html { scroll-behavior: auto; }
+    }
+
+    @media (max-width: 767.98px) {
+      .section-padding,
+      .ideal-for-section,
+      .work-section,
+      .cta-section { padding: 3.5rem 0; }
+      .hero-section { padding: 6.5rem 0 4rem; }
+      .approach-item + .approach-item {
+        border-left: 0;
+        border-top: 1px solid #D8DEE4;
+        padding-left: 0;
+      }
+      .ideal-row p { margin-top: .4rem; }
+      .work-item { padding: 1.6rem 0; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nadia Shahmehri",
+    "jobTitle": "Operations and Systems Consultant",
+    "telephone": "+1-781-566-2342",
+    "email": "mailto:nadia.shahmehri@gmail.com",
+    "url": "https://nadiashahmehri.github.io/"
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="Primary">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Nadia Shahmehri</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#approach">My Approach</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ideal-for">Who I Help</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">My Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#consultation">Get Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <section class="hero-section" id="home" aria-labelledby="home-title">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-kicker">Operations &amp; Systems Consultant</div>
+          <h1 id="home-title">Nadia Shahmehri</h1>
+          <h2>I help nonprofits and growing teams figure out what isn't working and build better systems for people, finance, data, and operations.</h2>
+          <div class="contact-info" aria-label="Contact">
+            <a href="tel:+17815662342">781-566-2342</a>
+            <a href="mailto:nadia.shahmehri@gmail.com">nadia.shahmehri@gmail.com</a>
+          </div>
+          <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ21PHYPMKeaGR3G2JNrUt0BQP0rJ2Y-OKEifvglXTLPZZExg6R90CsYbu9c-gdceT6zx2fH3JQI?gv=true"
+             target="_blank" rel="noopener" class="btn-primary-cta">Book a Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding approach-section" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <h3 class="section-title" id="approach-title">My Approach</h3>
+        <p class="section-intro">I work directly with leadership and operations teams to build clear, connected systems that keep daily work running smoothly and support growth.</p>
+
+        <div class="row g-0">
+          <div class="col-md-4 approach-item">
+            <span class="approach-mark" aria-hidden="true"></span>
+            <h4>Right-sized for where you are</h4>
+            <p>Practical systems built around your organization's actual capacity, tools, and ways of working.</p>
+          </div>
+          <div class="col-md-4 approach-item">
+            <span class="approach-mark" aria-hidden="true"></span>
+            <h4>Built to grow with you</h4>
+            <p>I build the structure you need now without creating systems you'll immediately outgrow.</p>
+          </div>
+          <div class="col-md-4 approach-item">
+            <span class="approach-mark" aria-hidden="true"></span>
+            <h4>I do the work, not just the planning</h4>
+            <p>I build, configure, document, and implement alongside your team until the system works in practice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding services-section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <h3 class="section-title" id="services-title">What I Can Help With</h3>
+        <p class="section-intro">I focus on the systems that support people, finance, data, and day-to-day operations.</p>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <article class="service-card people d-flex flex-column">
+              <h4>People Operations</h4>
+              <p class="service-summary">Practical systems for managing employees from hiring through offboarding.</p>
+              <ul class="service-list">
+                <li>Onboarding and offboarding</li>
+                <li>Payroll, benefits, and leave administration</li>
+                <li>HRIS administration</li>
+                <li>Recruiting workflows</li>
+                <li>Employee records and compliance</li>
+                <li>Performance review systems</li>
+                <li>Policies and documentation</li>
+              </ul>
+              <div class="platforms">
+                <strong>Platforms</strong>
+                HiBob • ADP Workforce Now • Gusto • Paychex • Rippling • Paylocity • TriNet • Checkr • E-Verify
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6">
+            <article class="service-card finance d-flex flex-column">
+              <h4>Finance &amp; Development Operations</h4>
+              <p class="service-summary">Systems and processes for keeping financial and fundraising work organized and accurate.</p>
+              <ul class="service-list">
+                <li>Bookkeeping, AP/AR, and invoicing</li>
+                <li>Budgets, cash flow, and financial reporting</li>
+                <li>Grant and restricted-fund tracking</li>
+                <li>Expense and reimbursement workflows</li>
+                <li>Donor records and giving platforms</li>
+                <li>Donor acknowledgments and fundraising operations</li>
+                <li>CRM administration</li>
+              </ul>
+              <div class="platforms">
+                <strong>Platforms</strong>
+                QuickBooks Online • Bill.com • Expensify • Salesforce NPSP • Raiser’s Edge NXT • Bloomerang • DonorPerfect • HubSpot • Little Green Light • Mailchimp • Constant Contact
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6">
+            <article class="service-card database d-flex flex-column">
+              <h4>Systems &amp; Data</h4>
+              <p class="service-summary">Connected systems that make information easier to manage, use, and report on.</p>
+              <ul class="service-list">
+                <li>Database and CRM setup</li>
+                <li>System implementations and migrations</li>
+                <li>Data cleanup and standardization</li>
+                <li>Workflow automation</li>
+                <li>Reporting and dashboards</li>
+                <li>Platform administration</li>
+                <li>Access, roles, and permissions</li>
+              </ul>
+              <div class="platforms">
+                <strong>Platforms</strong>
+                Airtable • Google Sheets • Excel • Typeform • Google Forms • Blackbaud LMS/SIS
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6">
+            <article class="service-card process d-flex flex-column">
+              <h4>Organizational Operations</h4>
+              <p class="service-summary">Structure for the recurring work that keeps an organization running.</p>
+              <ul class="service-list">
+                <li>Executive and board support systems</li>
+                <li>Meeting and project coordination</li>
+                <li>SOPs and process documentation</li>
+                <li>Knowledge bases and shared resources</li>
+                <li>Internal workflows</li>
+                <li>Project-management systems</li>
+                <li>Staff systems training</li>
+              </ul>
+              <div class="platforms">
+                <strong>Platforms</strong>
+                Google Workspace • Microsoft 365 • Asana • Slack • Monday.com • Trello • DocuSign • Zoom
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ideal-for-section" id="ideal-for" aria-labelledby="ideal-title">
+      <div class="container">
+        <h3 class="section-title" id="ideal-title">Who I Help</h3>
+        <div class="mt-4">
+          <div class="ideal-row">
+            <h5>Mission-driven teams with limited operations capacity</h5>
+            <p>Teams that need stronger structure, systems, and follow-through.</p>
+          </div>
+          <div class="ideal-row">
+            <h5>Organizations in growth mode</h5>
+            <p>Work is growing faster than existing systems can support.</p>
+          </div>
+          <div class="ideal-row">
+            <h5>Leaders who need systems, not more tools</h5>
+            <p>The tools already exist. The workflows, ownership, and connections between them need work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <h3 class="section-title" id="work-title">Examples of My Work</h3>
+        <p class="section-intro">A few examples of the systems and infrastructure I've built for mission-driven organizations.</p>
+
+        <article class="work-item people">
+          <div class="row">
+            <div class="col-md-4"><h4>HR Infrastructure From the Ground Up</h4></div>
+            <div class="col-md-8">
+              <p>Created an organization's first standardized onboarding and offboarding framework, including centralized tracking, compliance workflows, and supporting documentation.</p>
+              <div class="work-tags">People Operations / HRIS / Compliance / Workflow Design</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-item data">
+          <div class="row">
+            <div class="col-md-4"><h4>Integrated Operations Database</h4></div>
+            <div class="col-md-8">
+              <p>Built an organization's first centralized system connecting program, finance, and operations data, with automated document generation and data validation.</p>
+              <div class="work-tags">Data / Operations / Automation</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-item process">
+          <div class="row">
+            <div class="col-md-4"><h4>Payroll System Transition</h4></div>
+            <div class="col-md-8">
+              <p>Led a nonprofit's payroll transition from vendor evaluation through implementation, selecting a system that reduced payroll service costs by 26%.</p>
+              <div class="work-tags">Payroll / Finance / Vendor Evaluation / Implementation</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-item data">
+          <div class="row">
+            <div class="col-md-4"><h4>LMS &amp; SIS Migration</h4></div>
+            <div class="col-md-8">
+              <p>Managed system migration work including data mapping, cleanup, testing, validation, documentation, and staff training.</p>
+              <div class="work-tags">Systems / Data Migration / Documentation / Training</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats-section" aria-labelledby="stats-title">
+      <div class="container">
+        <h3 class="section-title" id="stats-title">Selected Results</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="stat">
+              <span class="stat-number">35+</span>
+              <div class="stat-label">Member organizations supported through nonprofit operations.</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat">
+              <span class="stat-number">26%</span>
+              <div class="stat-label">Reduction in payroll service costs through a system transition.</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat">
+              <span class="stat-number">170%</span>
+              <div class="stat-label">Mailchimp audience growth through segmentation and integrated web forms.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="consultation" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-inner">
+          <h3 id="cta-title">Get a clear picture of your operations and what to improve next.</h3>
+          <p>Book a consultation to walk through your current operations, identify the biggest gaps, and get a clearer sense of what needs attention first.</p>
+          <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ21PHYPMKeaGR3G2JNrUt0BQP0rJ2Y-OKEifvglXTLPZZExg6R90CsYbu9c-gdceT6zx2fH3JQI?gv=true"
+             target="_blank" rel="noopener" class="cta-button">Book a Consultation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Nadia Shahmehri Consulting</p>
+      <p>Massachusetts</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    function onScroll() {
+      let current = '';
+      sections.forEach(sec => {
+        const top = window.scrollY + (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 64) + 24;
+        if (top >= sec.offsetTop && top < sec.offsetTop + sec.offsetHeight) {
+          current = '#' + sec.id;
+        }
+      });
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+</html>
